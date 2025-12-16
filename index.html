@@ -893,28 +893,20 @@
 <script>
   new CozeWebSDK.WebChatClient({
     config: {
-      // 您的智能体 ID (保持不变)
       bot_id: '7583987565540409380',
     },
     componentProps: {
-      // 聊天框标题，您可以改成中文，比如 "规划合规助手"
       title: '规划合规助手',
     },
     auth: {
       type: 'token',
-      // ▼▼▼▼▼▼ 关键修改点 ▼▼▼▼▼▼
-      // 请将下面的 pat_xxxxxx 替换为您刚刚在 Coze 后台生成的真实 Token
-      token: 'pat_fsDZJLnHdtzWyPLTUO7lqWQYrNH7sB4nuptj6IpT8oeKRZyJRTBTkcCarVViaUmN', 
-      
-      // 刷新逻辑，对于静态网页，这里直接返回同一个 Token 即可
+      token: 'pat_fsDZJLnHdtzWyPLTUO7lqWQYrNH7sB4nuptj6IpT8oeKRZyJRTBTkcCarVViaUmN',
       onRefreshToken: function () {
         return 'pat_fsDZJLnHdtzWyPLTUO7lqWQYrNH7sB4nuptj6IpT8oeKRZyJRTBTkcCarVViaUmN'
       }
-      // ▲▲▲▲▲▲ 关键修改点 ▲▲▲▲▲▲
     }
   });
 </script>
 </body>
-</html></script>
-</body>
 </html>
+
